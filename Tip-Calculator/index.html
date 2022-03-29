@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title> Tip Calculator </title>
+  <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="format-detection" content="telephone=no" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link href="css/tip-calculator.css" rel="stylesheet"/>
+</head>
+<body>
+
+<header>
+  <h1> Amma Tip Calculator</h1>
+</header>
+
+<section class="tip-calculator">
+  <div class="tip-container">
+    <div class="tip-grid tip-grid-left">
+      <div class="tip-form-container">
+        <form class="tip-form">
+          <label>Bill</label>
+         <div class="bill-amount">
+          <input type="number" id="total-bill" placeholder="Enter Total Bill" minlength="6" maxlength="25" required/>
+         </div>
+          <label class="error-text">Input field should not be Zero</label>
+        </form>
+      </div>
+
+      <div class="tip-values-container">
+        <p>Select Tip</p>
+      <div class="tip-values">
+        <div class="tip-value" data-tip="5">5%</div>
+        <div class="tip-value" data-tip="10">10%</div>
+        <div class="tip-value" data-tip="15">15%</div>
+        <div class="tip-value" data-tip="25">25%</div>
+        <div class="tip-value" data-tip="50">50%</div>
+       <div class="tip-custom">
+          <input type="number" class="custom-input" placeholder="Custom Value"/>
+        </div>
+      </div>
+      </div>
+
+      <div class="tip-form-container">
+        <form class="tip-person-form">
+          <label>Number of People</label>          
+          <div class="tip-person-container">
+            <input type="number" class="number-person" placeholder="Enter Number of person" />
+          </div>
+          <label class="error-text">Input field should not be Zero</label>
+        </form>
+      </div>
+    </div>
+    <div class="tip-grid tip-grid-right">
+      <div class="row">
+        <h5>Tip Amount</h5>
+        <h3>$<span class="tip-amount">0.0</span></h3>
+      </div>
+      <div class="row">
+        <h5>Total Bill</h5>
+        <h3>$<span class="tip-total-amount">0.0</span></h3>
+      </div>
+      <button class="reset-btn">Reset</button>
+    </div>
+  </div>
+</section>
+<script src="js/tip-calculator.js"></script>
+
+</body>  
+</html>  
