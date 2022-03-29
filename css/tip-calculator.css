@@ -1,0 +1,156 @@
+/* Color Variable declarations */
+:root {
+  --darkest-cyan: hsl(172, 67%, 45%);
+  --dark-cyan:  hsl(183, 100%, 15%);
+  --dark-gray-cyan: hsl(186, 14%, 43%);
+  --gray-cyan:  hsl(184, 14%, 56%);
+  --light-gray-cyan: hsl(185, 41%, 84%);
+  --lightest-gray-cyan: hsl(189, 41%, 97%);
+  --white: hsl(0, 0%, 100%);
+}
+
+ *{
+   padding: 0;
+   margin: 0;
+   box-sizing:  border-box;
+ }
+ body {
+   padding: 30px;
+   background-color: var(--light-gray-cyan);
+   font-family: 'Space Mono', monospace;
+   font-size: 24px;
+   font-weight: 700;    
+ }
+ p, 
+ label {
+   display: inline-flex;
+   margin-bottom: 10px;
+   color: var(--dark-cyan);
+   font-size: 18px;
+ }
+ .tip-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 60%;
+  margin: 40px auto;
+  padding: 30px;
+  border-radius: 15px;
+  background-color: var(--white);
+ }
+ .tip-grid {
+   flex: 1 0 48%; 
+ }
+.tip-grid-left {
+  margin-right: 20px;
+}
+.total-from {
+   display: flex;
+   flex-direction: column;
+ } 
+ .tip-calculator input{
+   width: 100%;
+   padding: 10px 20px;
+   border-radius: 6px;
+   outline: 2px solid transparent;
+   border: 2px solid transparent;
+   background-color: var(--lightest-gray-cyan);
+   color: var(--dark-cyan);
+   font-size: 18px;
+   font-weight: 600;
+   text-align: right;    
+ }
+ .tip-calculator input:hover,
+ .tip-calculator input:focus{
+  outline-color: var( --darkest-cyan);
+  }
+ .tip-values-container {
+   margin: 40px 0;
+ }
+ .tip-values {
+   display: flex;
+   flex-wrap: wrap;   
+ }
+ .tip-value {   
+   padding: 8px;
+   border-radius: 8px;
+   margin: 5px;
+   background-color: var(--dark-cyan);
+   color: var(--white);
+   font-size: 26px;
+   cursor: pointer;
+   border-bottom: 5px solid black;
+ }
+ .tip-value,
+.tip-custom {
+  display: flex;
+  flex: 1 0 30%;
+  justify-content: center;
+ }
+ .tip-custom input{
+   padding: 5px 10px;
+ }
+ .tip-value:hover,
+ .tip-value-active {
+   background-color: var(--darkest-cyan);
+   color: var(--dark-cyan); 
+   border-bottom: 0;   
+ } 
+ .tip-grid-right {
+   padding: 100px 30px;
+   border-radius: 10px;
+   background-color: var(--dark-cyan);
+ }
+ .row {
+   display:  flex;
+   justify-content: space-between;  
+   align-items: center;
+ }
+
+ .row:not(:last-child){
+   margin-bottom: 20px;
+ }
+ .tip-grid-right h3 {
+   color: var(--darkest-cyan);
+   font-size: 32px;
+ }
+ .tip-grid-right h5 {
+   color: var(--white);
+   font-size: 16px;
+ }
+ .reset-btn { 
+   width: 100%;   
+   padding: 10px 30px;
+   margin-top: 30px;
+   border-radius: 10px;
+   background-color: var(--darkest-cyan);
+   color: var(--dark-cyan);
+   font-size: 20px;
+   font-weight: 700;
+   text-align: center;
+   text-transform: uppercase;
+   cursor: pointer;  
+ }
+
+ .error-message input{
+   outline-color: red;
+ }
+ .error-text {
+   display: none;
+ }
+ .error-message .error-text{
+   color: red;
+   font-size: 12px;
+   display: block;
+ }
+
+ @media screen and (max-width: 768px){
+  .tip-container{
+    max-width: 100%;
+    flex-direction: column;
+  }
+  .tip-grid-right {
+    margin-top: 30px;
+  }
+ }
+
